@@ -1,0 +1,67 @@
+name: publish mkdocs
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: null
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+          fetch-depth: 0 
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.7"
+          architecture: "x64"
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip     # install pip
+          python3 -m pip install mkdocs            # install mkdocs
+      - name: Build html
+        run: |
+          cat > mkdocs.yml<< EOF
+site_name: Smart Water
+site_url: https://fiware-brand-guide.readthedocs.org
+repo_url: https://github.com/FIWARE-Ops/brand-guide
+site_description: FIWARE Brand Guideline
+docs_dir: docs
+site_dir: html
+use_directory_urls: false
+theme: readthedocs
+markdown_extensions:
+  - fenced_code
+
+extra_css: ["https://www.fiware.org/style/fiware_readthedocs.css", "https://www.fiware.org/style/fiware_readthedocs_neutral.css"]
+
+nav:
+EOF
+
+          echo "  - Intro: 'index.md'" >> mkdocs.yml
+          previous=''
+          listing=`find . -type f -name spec.md  -print0 | sort -z | xargs -r0`
+
+          IFS=' ' list=($listing)
+          for element in "${list[@]}"; 
+          do
+            IFS='/' array=($element)
+            value=${array[1]#*.}
+            if [[ "$previous" !=  "$value" ]]; then
+                  previous=$(echo $value)
+                  echo "  - '$value':" >> mkdocs.yml
+                  mkdir -p docs/${value}
+            fi
+            echo "    - '${array[2]}': '${value}/${array[2]}.md'" >> mkdocs.yml
+            cd ${array[1]}/${array[2]}/${array[3]}
+            cp ${array[4]} ../../../docs/${value}/${array[2]}.md
+            cd ../../..
+          done
+          mkdocs build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html
