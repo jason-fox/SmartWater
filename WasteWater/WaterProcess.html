@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://fiware-brand-guide.readthedocs.org/WasteWater/WaterProcess.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>WaterProcess - Smart Water</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs.css" rel="stylesheet" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs_neutral.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WaterProcess";
+        var mkdocs_page_input_path = "WasteWater/WaterProcess.md";
+        var mkdocs_page_url = "/WasteWater/WaterProcess.html";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Smart Water
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../index.md">Intro</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OpenChannelManagement</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/CrossSection.html">CrossSection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannel.html">OpenChannel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelCurve.html">OpenChannelCurve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelFlowRegulation.html">OpenChannelFlowRegulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelJunction.html">OpenChannelJunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelSystem.html">OpenChannelSystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructure.html">RegulationStructure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructureSimulation.html">RegulationStructureSimulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/SluiceGate.html">SluiceGate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/Spillway.html">Spillway</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WasteWater</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="Blower.html">Blower</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="OffGasStack.html">OffGasStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterJunction.html">WasteWaterJunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterPlant.html">WasteWaterPlant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterSimulationResult.html">WasteWaterSimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterTank.html">WasteWaterTank</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="WaterProcess.html">WaterProcess</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-properties">List of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-model-description-of-properties">Data Model description of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-payloads">Example payloads</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#waterprocess-ngsi-v2-key-values-example">WaterProcess NGSI-v2 key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waterprocess-ngsi-v2-normalized-example">WaterProcess NGSI-v2 normalized Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waterprocess-ngsi-ld-key-values-example">WaterProcess NGSI-LD key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waterprocess-ngsi-ld-normalized-example">WaterProcess NGSI-LD normalized Example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterConsumption</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterConsumption/WaterConsumptionObserved.html">WaterConsumptionObserved</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistribution</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistribution/WaterDistributionNetwork.html">WaterDistributionNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistributionManagementEPANET</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Curve.html">Curve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Junction.html">Junction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pattern.html">Pattern</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pipe.html">Pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pump.html">Pump</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Reservoir.html">Reservoir</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/SimulationResult.html">SimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/SimulationScenario.html">SimulationScenario</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Tank.html">Tank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Valve.html">Valve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/WaterNetwork.html">WaterNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterQuality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityObserved.html">WaterQualityObserved</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityPredicted.html">WaterQualityPredicted</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Smart Water</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>WasteWater &raquo;</li>
+      <li>WaterProcess</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FIWARE-Ops/brand-guide/edit/master/docs/WasteWater/WaterProcess.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- 10-Header -->
+
+<p><a href="https://smartdatamodels.org"><img alt="Smart Data Models" src="https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png" title="Logo" /></a>  </p>
+<h1 id="entity-waterprocess">Entity: WaterProcess</h1>
+<!-- /10-Header -->
+
+<!-- 15-License -->
+
+<p><a href="https://github.com/smart-data-models//dataModel.WasteWater/blob/master/WaterProcess/LICENSE.md">Open License</a>  </p>
+<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.gb715ace035_0_60">document generated automatically</a>  </p>
+<!-- /15-License -->
+
+<!-- 20-Description -->
+
+<p>Global description: <strong>The data model is intended to provide information about water process at water purification plant or water treatment plant</strong>  </p>
+<p>version: 0.0.1  </p>
+<!-- /20-Description -->
+
+<!-- 30-PropertiesList -->
+
+<h2 id="list-of-properties">List of properties</h2>
+<p><sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup><br />
+- <code>address[object]</code>: The mailing address  . Model: <a href="https://schema.org/address">https://schema.org/address</a>
+- <code>alkalinity[number]</code>: The intake volume of the pump station. All units are accepted in <a href="https://www.unece.org/cefact.html">CEFACT</a> code.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>alternateName[string]</code>: An alternative name for this item<br />
+- <code>areaServed[string]</code>: The geographic area where a service or offered item is provided  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>bod[number]</code>: Biochemical oxygen demand (BOD) is the amount of dissolved oxygen (DO) needed (i.e. demanded) by aerobic biological organisms to break down organic material present in a given water sample at certain temperature over a specific time period<br />
+- <code>chromaticity[number]</code>: The chromaticity of the processed water. All units are accepted in <a href="https://www.unece.org/cefact.html">CEFACT</a> code.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>cod[number]</code>: Chemical oxygen demand (COD) is an indicative measure of the amount of oxygen that can be consumed by reactions in a measured solution<br />
+- <code>contactPoint[object]</code>: The details to contact with the item.  . Model: <a href="https://schema.org/ContactPoint">https://schema.org/ContactPoint</a>
+- <code>dataProvider[string]</code>: A sequence of characters identifying the provider of the harmonised data entity.<br />
+- <code>dateCreated[string]</code>: Entity creation timestamp. This will usually be allocated by the storage platform.<br />
+- <code>dateModified[string]</code>: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.<br />
+- <code>description[string]</code>: A description of this item<br />
+- <code>id[*]</code>: Unique identifier of the entity<br />
+- <code>location[*]</code>: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon<br />
+- <code>name[string]</code>: The name of this item.<br />
+- <code>operationStatus[string]</code>:   . Model: <a href="https://schema.org/Text.ss The operation status of the water proce.">https://schema.org/Text.ss The operation status of the water proce.</a>
+- <code>owner[array]</code>: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)<br />
+- <code>pH[number]</code>: Acidity or basicity of an aqueous solution.<br />
+- <code>residualChlorine[number]</code>: The intake volume of the pump station. All units are accepted in <a href="https://www.unece.org/cefact.html">CEFACT</a> code.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>seeAlso[*]</code>: list of uri pointing to additional resources about the item<br />
+- <code>source[string]</code>: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.<br />
+- <code>temperature[number]</code>: The temperature of the processed water. All units are accepted in <a href="https://www.unece.org/cefact.html">CEFACT</a> code.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>tn[number]</code>: Total nitrogen  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>tp[number]</code>: Total phosphorus  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>tss[number]</code>: Total suspended solids  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>turbidity[number]</code>: Amount of light scattered by particles in the water column. Unit:'NTU<br />
+- <code>type[string]</code>: NGSI Entity type. It has to be WaterProcess<br />
+- <code>waterProcessType[string]</code>: The type of water process at water purification plant or water treatment plant (aka. waste water treatment plant).  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a></p>
+<!-- /30-PropertiesList -->
+
+<!-- 35-RequiredProperties -->
+
+<p>Required properties<br />
+- <code>id</code><br />
+- <code>type</code>  </p>
+<!-- /35-RequiredProperties -->
+
+<!-- 40-RequiredProperties -->
+
+<!-- /40-RequiredProperties -->
+
+<!-- 50-DataModelHeader -->
+
+<h2 id="data-model-description-of-properties">Data Model description of properties</h2>
+<p>Sorted alphabetically (click for details)  </p>
+<!-- /50-DataModelHeader -->
+
+<!-- 60-ModelYaml -->
+
+<details><summary><strong>full yaml details</strong></summary>    
+
+
+<pre><code class="language-yaml">WaterProcess:    
+  description: The data model is intended to provide information about water process at water purification plant or water treatment plant    
+  properties:    
+    address:    
+      description: The mailing address    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
+    alkalinity:    
+      description: 'The intake volume of the pump station. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: cubic metre per second    
+    alternateName:    
+      description: An alternative name for this item    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: The geographic area where a service or offered item is provided    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    bod:    
+      description: Biochemical oxygen demand (BOD) is the amount of dissolved oxygen (DO) needed (i.e. demanded) by aerobic biological organisms to break down organic material present in a given water sample at certain temperature over a specific time period    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
+        units: mg/l    
+    chromaticity:    
+      description: 'The chromaticity of the processed water. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: none    
+    cod:    
+      description: Chemical oxygen demand (COD) is an indicative measure of the amount of oxygen that can be consumed by reactions in a measured solution    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
+        units: mg/l    
+    contactPoint:    
+      description: The details to contact with the item.    
+      properties:    
+        areaServed:    
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: Property. Array of identifiers format of any NGSI entity.    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: Property. Array of identifiers format of any NGSI entity.    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+        contactType:    
+          description: Property. Contact type of this item.    
+          type: string    
+        email:    
+          description: Property. Email address of owner.    
+          format: idn-email    
+          type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
+        name:    
+          description: Property. The name of this item.    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. &quot;iPhone&quot;) or a general category of products or services (e.g. &quot;smartphones&quot;).'    
+          type: string    
+        telephone:    
+          description: Property. Telephone of this contact.    
+          type: string    
+        url:    
+          description: Property. URL which provides a description or further information about this item.    
+          format: uri    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/ContactPoint    
+        type: Property    
+    dataProvider:    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateCreated:    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateModified:    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    description:    
+      description: A description of this item    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    id:    
+      anyOf: &amp;waterprocess_-_properties_-_owner_-_items_-_anyof    
+        - description: Property. Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: Property. Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+      description: Unique identifier of the entity    
+      x-ngsi:    
+        type: Property    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: GeoProperty. Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+        - description: GeoProperty. Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+      x-ngsi:    
+        type: GeoProperty    
+    name:    
+      description: The name of this item.    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    operationStatus:    
+      description: &quot;&quot;    
+      enum:    
+        - normal    
+        - watch    
+        - warning    
+      type: string    
+      x-ngsi:    
+        model: 'https://schema.org/Text.ss The operation status of the water proce.'    
+        type: Property    
+    owner:    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
+      items:    
+        anyOf: *waterprocess_-_properties_-_owner_-_items_-_anyof    
+        description: Property. Unique identifier of the entity    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    pH:    
+      description: Acidity or basicity of an aqueous solution.    
+      maximum: 14    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    residualChlorine:    
+      description: 'The intake volume of the pump station. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: cubic metre per second    
+    seeAlso:    
+      description: list of uri pointing to additional resources about the item    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      x-ngsi:    
+        type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    temperature:    
+      description: 'The temperature of the processed water. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: celsius    
+    tn:    
+      description: Total nitrogen    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: mg/l    
+    tp:    
+      description: Total phosphorus    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: mg/l    
+    tss:    
+      description: Total suspended solids    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: mg/l    
+    turbidity:    
+      description: 'Amount of light scattered by particles in the water column. Unit:''NTU'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    type:    
+      description: NGSI Entity type. It has to be WaterProcess    
+      enum:    
+        - WaterProcess    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    waterProcessType:    
+      description: The type of water process at water purification plant or water treatment plant (aka. waste water treatment plant).    
+      enum:    
+        - inflow    
+        - sedimentation    
+        - filtration    
+        - disinfection    
+        - waterTreatment    
+        - primarySedimentation    
+        - bioreactor    
+        - effluent    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+  required:    
+    - id    
+    - type    
+  type: object    
+  x-derived-from: &quot;&quot;    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WasteWater/blob/master/WaterProcess/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WasteWater/schema.json    
+  x-model-tags: &quot;&quot;    
+  x-version: 0.0.1    
+</code></pre>
+
+</details>
+<pre><code>
+</code></pre>
+<!-- /60-ModelYaml -->
+
+<!-- 70-MiddleNotes -->
+
+<!-- /70-MiddleNotes -->
+
+<!-- 80-Examples -->
+
+<h2 id="example-payloads">Example payloads</h2>
+<h4 id="waterprocess-ngsi-v2-key-values-example">WaterProcess NGSI-v2 key-values Example</h4>
+<p>Here is an example of a WaterProcess in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;urn:waterdna:haemil:WaterProcess_01&quot;,  
+  &quot;type&quot;: &quot;WaterProcess&quot;,  
+  &quot;location&quot;: {  
+    &quot;type&quot;: &quot;Point&quot;,  
+    &quot;coordinates&quot;: [  
+      127.266663,  
+      36.524677  
+    ]  
+  },  
+  &quot;name&quot;: &quot;inflow process at water treatment plant 1&quot;,  
+  &quot;waterProcessType&quot;: &quot;inflow&quot;,  
+  &quot;tn&quot;: 73.152,  
+  &quot;tp&quot;: 6.1,  
+  &quot;tss&quot;: 130.9  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="waterprocess-ngsi-v2-normalized-example">WaterProcess NGSI-v2 normalized Example</h4>
+<p>Here is an example of a WaterProcess in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;urn:waterdna:haemil:WaterProcess_01&quot;,  
+  &quot;type&quot;: &quot;WaterProcess&quot;,  
+  &quot;location&quot;: {  
+    &quot;type&quot;: &quot;geo:sjon&quot;,  
+    &quot;value&quot;: {  
+      &quot;type&quot;: &quot;Point&quot;,  
+      &quot;coordinates&quot;: [  
+        127.266663,  
+        36.524677  
+      ]  
+    }  
+  },  
+  &quot;name&quot;: {  
+    &quot;type&quot;: &quot;Text&quot;,  
+    &quot;value&quot;: &quot;inflow process at water treatment plant 1&quot;  
+  },  
+  &quot;waterProcessType&quot;: {  
+    &quot;type&quot;: &quot;Text&quot;,  
+    &quot;value&quot;: &quot;inflow&quot;  
+  },  
+  &quot;tn&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 73.152  
+  },  
+  &quot;tp&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 6.1  
+  },  
+  &quot;tss&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 130.9  
+  }  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="waterprocess-ngsi-ld-key-values-example">WaterProcess NGSI-LD key-values Example</h4>
+<p>Here is an example of a WaterProcess in JSON-LD format as key-values. This is compatible with NGSI-LD when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;urn:waterdna:haemil:WaterProcess_01&quot;,  
+  &quot;type&quot;: &quot;WaterProcess&quot;,  
+  &quot;location&quot;: {  
+    &quot;type&quot;: &quot;Point&quot;,  
+    &quot;coordinates&quot;: [  
+      127.266663,  
+      36.524677  
+    ]  
+  },  
+  &quot;name&quot;: &quot;inflow process at water treatment plant 1&quot;,  
+  &quot;waterProcessType&quot;: &quot;inflow&quot;,  
+  &quot;tn&quot;: 73.152,  
+  &quot;tp&quot;: 6.1,  
+  &quot;tss&quot;: 130.9,  
+  &quot;@context&quot;: [  
+    &quot;https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld&quot;,  
+    &quot;http://uri.citydatahub.kr/ngsi-ld/water.jsonld&quot;  
+  ]  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="waterprocess-ngsi-ld-normalized-example">WaterProcess NGSI-LD normalized Example</h4>
+<p>Here is an example of a WaterProcess in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;urn:waterdna:haemil:WaterProcess_01&quot;,  
+  &quot;type&quot;: &quot;WaterProcess&quot;,  
+  &quot;location&quot;: {  
+    &quot;type&quot;: &quot;GeoProperty&quot;,  
+    &quot;value&quot;: {  
+      &quot;type&quot;: &quot;Point&quot;,  
+      &quot;coordinates&quot;: [  
+        127.266663,  
+        36.524677  
+      ]  
+    }  
+  },  
+  &quot;name&quot;: {  
+    &quot;type&quot;: &quot;Property&quot;,  
+    &quot;value&quot;: &quot;inflow process at water treatment plant 1&quot;  
+  },  
+  &quot;waterProcessType&quot;: {  
+    &quot;type&quot;: &quot;Property&quot;,  
+    &quot;value&quot;: &quot;inflow&quot;  
+  },  
+  &quot;tn&quot;: {  
+    &quot;type&quot;: &quot;Property&quot;,  
+    &quot;value&quot;: 73.152  
+  },  
+  &quot;tp&quot;: {  
+    &quot;type&quot;: &quot;Property&quot;,  
+    &quot;value&quot;: 6.1  
+  },  
+  &quot;tss&quot;: {  
+    &quot;type&quot;: &quot;Property&quot;,  
+    &quot;value&quot;: 130.9  
+  },  
+  &quot;@context&quot;: [  
+    &quot;https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld&quot;,  
+    &quot;http://uri.citydatahub.kr/ngsi-ld/water.jsonld&quot;  
+  ]  
+}  
+</code></pre>
+
+</details>
+<!-- 90-FooterNotes -->
+
+<!-- /90-FooterNotes -->
+
+<!-- 95-Units -->
+
+<p>See <a href="https://smartdatamodels.org/index.php/faqs/">FAQ 10</a> to get an answer on how to deal with magnitude units  </p>
+<!-- /95-Units -->
+
+<!-- 97-LastFooter -->
+
+<hr />
+<p><a href="https://smartdatamodels.org">Smart Data Models</a> +++ <a href="https://bit.ly/contribution_manual">Contribution Manual</a> +++ <a href="https://bit.ly/Introduction_SDM">About</a><!-- /97-LastFooter --></p>
+<!-- /80-Examples -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="WasteWaterTank.html" class="btn btn-neutral float-left" title="WasteWaterTank"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../WaterConsumption/WaterConsumptionObserved.html" class="btn btn-neutral float-right" title="WaterConsumptionObserved">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FIWARE-Ops/brand-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="WasteWaterTank.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../WaterConsumption/WaterConsumptionObserved.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

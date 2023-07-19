@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://fiware-brand-guide.readthedocs.org/WaterDistributionManagementEPANET/Curve.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Curve - Smart Water</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs.css" rel="stylesheet" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs_neutral.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Curve";
+        var mkdocs_page_input_path = "WaterDistributionManagementEPANET/Curve.md";
+        var mkdocs_page_url = "/WaterDistributionManagementEPANET/Curve.html";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Smart Water
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../index.md">Intro</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OpenChannelManagement</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/CrossSection.html">CrossSection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannel.html">OpenChannel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelCurve.html">OpenChannelCurve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelFlowRegulation.html">OpenChannelFlowRegulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelJunction.html">OpenChannelJunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelSystem.html">OpenChannelSystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructure.html">RegulationStructure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructureSimulation.html">RegulationStructureSimulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/SluiceGate.html">SluiceGate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/Spillway.html">Spillway</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WasteWater</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/Blower.html">Blower</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/OffGasStack.html">OffGasStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WasteWaterJunction.html">WasteWaterJunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WasteWaterPlant.html">WasteWaterPlant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WasteWaterSimulationResult.html">WasteWaterSimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WasteWaterTank.html">WasteWaterTank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WaterProcess.html">WaterProcess</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterConsumption</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterConsumption/WaterConsumptionObserved.html">WaterConsumptionObserved</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistribution</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistribution/WaterDistributionNetwork.html">WaterDistributionNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistributionManagementEPANET</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="Curve.html">Curve</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-properties">List of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-model-description-of-properties">Data Model description of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-payloads">Example payloads</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#curve-ngsi-v2-key-values-example">Curve NGSI-v2 key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#curve-ngsi-v2-normalized-example">Curve NGSI-v2 normalized Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#curve-ngsi-ld-key-values-example">Curve NGSI-LD key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#curve-ngsi-ld-normalized-example">Curve NGSI-LD normalized Example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Junction.html">Junction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Pattern.html">Pattern</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Pipe.html">Pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Pump.html">Pump</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Reservoir.html">Reservoir</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="SimulationResult.html">SimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="SimulationScenario.html">SimulationScenario</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Tank.html">Tank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="Valve.html">Valve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WaterNetwork.html">WaterNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterQuality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityObserved.html">WaterQualityObserved</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityPredicted.html">WaterQualityPredicted</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Smart Water</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>WaterDistributionManagementEPANET &raquo;</li>
+      <li>Curve</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FIWARE-Ops/brand-guide/edit/master/docs/WaterDistributionManagementEPANET/Curve.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- 10-Header -->
+
+<p><a href="https://smartdatamodels.org"><img alt="Smart Data Models" src="https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png" title="Logo" /></a>  </p>
+<h1 id="entity-curve">Entity: Curve</h1>
+<!-- /10-Header -->
+
+<!-- 15-License -->
+
+<p><a href="https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Curve/LICENSE.md">Open License</a>  </p>
+<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.gb715ace035_0_60">document generated automatically</a>  </p>
+<!-- /15-License -->
+
+<!-- 20-Description -->
+
+<p>Global description: <strong>This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.</strong>  </p>
+<p>version: 0.0.1  </p>
+<!-- /20-Description -->
+
+<!-- 30-PropertiesList -->
+
+<h2 id="list-of-properties">List of properties</h2>
+<p><sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup><br />
+- <code>address[object]</code>: The mailing address  . Model: <a href="https://schema.org/address">https://schema.org/address</a>
+- <code>alternateName[string]</code>: An alternative name for this item<br />
+- <code>areaServed[string]</code>: The geographic area where a service or offered item is provided  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>curveType[string]</code>: Entity's curve type. Enum:'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'<br />
+- <code>dataProvider[string]</code>: A sequence of characters identifying the provider of the harmonised data entity.<br />
+- <code>dateCreated[string]</code>: Entity creation timestamp. This will usually be allocated by the storage platform.<br />
+- <code>dateModified[string]</code>: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.<br />
+- <code>description[string]</code>: A description of this item<br />
+- <code>id[*]</code>: Unique identifier of the entity<br />
+- <code>location[*]</code>: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon<br />
+- <code>name[string]</code>: The name of this item.<br />
+- <code>owner[array]</code>: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)<br />
+- <code>seeAlso[*]</code>: list of uri pointing to additional resources about the item<br />
+- <code>source[string]</code>: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.<br />
+- <code>tag[string]</code>: An optional text string used to assign the pipe to a category, perhaps one based on age or material  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>type[string]</code>: NGSI-LD Entity Type. It must be equal to Curve.<br />
+- <code>xData[array]</code>: X data points for the curve<br />
+- <code>yData[array]</code>: Y data points for the curve  </p>
+<!-- /30-PropertiesList -->
+
+<!-- 35-RequiredProperties -->
+
+<p>Required properties<br />
+- <code>curveType</code><br />
+- <code>id</code><br />
+- <code>type</code><br />
+- <code>xData</code><br />
+- <code>yData</code>  </p>
+<!-- /35-RequiredProperties -->
+
+<!-- 40-RequiredProperties -->
+
+<!-- /40-RequiredProperties -->
+
+<!-- 50-DataModelHeader -->
+
+<h2 id="data-model-description-of-properties">Data Model description of properties</h2>
+<p>Sorted alphabetically (click for details)  </p>
+<!-- /50-DataModelHeader -->
+
+<!-- 60-ModelYaml -->
+
+<details><summary><strong>full yaml details</strong></summary>    
+
+
+<pre><code class="language-yaml">Curve:    
+  description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
+  properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    curveType:    
+      description: 'Entity''s curve type. Enum:''FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'''    
+      enum:    
+        - FLOW-HEAD    
+        - FLOW-EFFICIENCY    
+        - FLOW-HEADLOSS    
+        - LEVEL-VOLUME    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    id:    
+      anyOf: &amp;curve_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'GeoProperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      x-ngsi:    
+        type: GeoProperty    
+    name:    
+      description: 'The name of this item.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *curve_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      x-ngsi:    
+        type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    tag:    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    type:    
+      description: 'NGSI-LD Entity Type. It must be equal to Curve.'    
+      enum:    
+        - Curve    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    xData:    
+      description: 'X data points for the curve'    
+      items:    
+        type: number    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    yData:    
+      description: 'Y data points for the curve'    
+      items:    
+        type: number    
+      type: array    
+      x-ngsi:    
+        type: Property    
+  required:    
+    - id    
+    - type    
+    - curveType    
+    - xData    
+    - yData    
+  type: object    
+  x-derived-from: &quot;&quot;    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Curve/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
+</code></pre>
+
+</details>
+<pre><code>
+</code></pre>
+<!-- /60-ModelYaml -->
+
+<!-- 70-MiddleNotes -->
+
+<!-- /70-MiddleNotes -->
+
+<!-- 80-Examples -->
+
+<h2 id="example-payloads">Example payloads</h2>
+<h4 id="curve-ngsi-v2-key-values-example">Curve NGSI-v2 key-values Example</h4>
+<p>Here is an example of a Curve in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;fAM-8ca3-4533-a2eb-12015&quot;,  
+  &quot;type&quot;: &quot;Curve&quot;,  
+  &quot;curveType&quot;: &quot;FLOW-HEAD&quot;,  
+  &quot;xData&quot;: [  
+    0.5692,  
+    0.4647  
+  ],  
+  &quot;yData&quot;: [  
+    0.5692,  
+    0.4647  
+  ],  
+  &quot;description&quot;: &quot;Free Text&quot;,  
+  &quot;tag&quot;: &quot;DMA1&quot;  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="curve-ngsi-v2-normalized-example">Curve NGSI-v2 normalized Example</h4>
+<p>Here is an example of a Curve in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+    &quot;id&quot;: &quot;fAM-8ca3-4533-a2eb-12015&quot;,  
+    &quot;type&quot;: &quot;Curve&quot;,  
+    &quot;dateCreated&quot;: {  
+        &quot;type&quot;: &quot;DateTime&quot;,  
+        &quot;value&quot;: &quot;2020-02-16T17:43:00Z&quot;  
+    },  
+    &quot;dateModified&quot;: {  
+        &quot;type&quot;: &quot;DateTime&quot;,  
+        &quot;value&quot;: &quot;2020-02-16T17:43:00Z&quot;  
+    },  
+    &quot;curveType&quot;: {  
+        &quot;value&quot;: &quot;FLOW-HEAD&quot;  
+    },  
+    &quot;xData&quot;: {  
+        &quot;value&quot;: [  
+            0.5692,  
+            0.4647  
+        ]  
+    },  
+    &quot;yData&quot;: {  
+        &quot;value&quot;: [  
+            0.5692,  
+            0.4647  
+        ]  
+    },  
+    &quot;description&quot;: {  
+        &quot;value&quot;: &quot;Free Text&quot;  
+    },  
+    &quot;tag&quot;: {  
+        &quot;value&quot;: &quot;DMA1&quot;  
+    }  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="curve-ngsi-ld-key-values-example">Curve NGSI-LD key-values Example</h4>
+<p>Here is an example of a Curve in JSON-LD format as key-values. This is compatible with NGSI-LD when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+    &quot;id&quot;: &quot;fAM-8ca3-4533-a2eb-12015&quot;,  
+    &quot;type&quot;: &quot;Curve&quot;,  
+    &quot;curveType&quot;: &quot;FLOW-HEAD&quot;,  
+    &quot;description&quot;: &quot;Free Text&quot;,  
+    &quot;tag&quot;: &quot;DMA1&quot;,  
+    &quot;xData&quot;: [  
+        0.5692,  
+        0.4647  
+    ],  
+    &quot;yData&quot;: [  
+        0.5692,  
+        0.4647  
+    ],  
+    &quot;@context&quot;: [  
+        &quot;https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld&quot;  
+    ]  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="curve-ngsi-ld-normalized-example">Curve NGSI-LD normalized Example</h4>
+<p>Here is an example of a Curve in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+    &quot;id&quot;: &quot;urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015&quot;,  
+    &quot;type&quot;: &quot;Curve&quot;,  
+    &quot;createdAt&quot;: &quot;2020-02-16T17:43:00Z&quot;,  
+    &quot;curveType&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: &quot;FLOW-HEAD&quot;  
+    },  
+    &quot;description&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: &quot;Free Text&quot;  
+    },  
+    &quot;modifiedAt&quot;: &quot;2020-02-16T17:43:00Z&quot;,  
+    &quot;tag&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: &quot;DMA1&quot;  
+    },  
+    &quot;xData&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: [  
+            0.5692,  
+            0.4647  
+        ],  
+        &quot;unitCode&quot;: &quot;C62&quot;  
+    },  
+    &quot;yData&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: [  
+            0.5692,  
+            0.4647  
+        ],  
+        &quot;unitCode&quot;: &quot;C62&quot;  
+    },  
+    &quot;@context&quot;: [  
+        &quot;https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld&quot;  
+    ]  
+}  
+</code></pre>
+
+</details>
+<!-- 90-FooterNotes -->
+
+<!-- /90-FooterNotes -->
+
+<!-- 95-Units -->
+
+<p>See <a href="https://smartdatamodels.org/index.php/faqs/">FAQ 10</a> to get an answer on how to deal with magnitude units  </p>
+<!-- /95-Units -->
+
+<!-- 97-LastFooter -->
+
+<hr />
+<p><a href="https://smartdatamodels.org">Smart Data Models</a> +++ <a href="https://bit.ly/contribution_manual">Contribution Manual</a> +++ <a href="https://bit.ly/Introduction_SDM">About</a><!-- /97-LastFooter --></p>
+<!-- /80-Examples -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../WaterDistribution/WaterDistributionNetwork.html" class="btn btn-neutral float-left" title="WaterDistributionNetwork"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="Junction.html" class="btn btn-neutral float-right" title="Junction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FIWARE-Ops/brand-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../WaterDistribution/WaterDistributionNetwork.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="Junction.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

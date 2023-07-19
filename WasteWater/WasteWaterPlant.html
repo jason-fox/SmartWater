@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://fiware-brand-guide.readthedocs.org/WasteWater/WasteWaterPlant.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>WasteWaterPlant - Smart Water</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs.css" rel="stylesheet" />
+        <link href="https://www.fiware.org/style/fiware_readthedocs_neutral.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WasteWaterPlant";
+        var mkdocs_page_input_path = "WasteWater/WasteWaterPlant.md";
+        var mkdocs_page_url = "/WasteWater/WasteWaterPlant.html";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Smart Water
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../index.md">Intro</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OpenChannelManagement</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/CrossSection.html">CrossSection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannel.html">OpenChannel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelCurve.html">OpenChannelCurve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelFlowRegulation.html">OpenChannelFlowRegulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelJunction.html">OpenChannelJunction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/OpenChannelSystem.html">OpenChannelSystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructure.html">RegulationStructure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/RegulationStructureSimulation.html">RegulationStructureSimulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/SluiceGate.html">SluiceGate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OpenChannelManagement/Spillway.html">Spillway</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WasteWater</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="Blower.html">Blower</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="OffGasStack.html">OffGasStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterJunction.html">WasteWaterJunction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="WasteWaterPlant.html">WasteWaterPlant</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-properties">List of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-model-description-of-properties">Data Model description of properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-payloads">Example payloads</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#wastewaterplant-ngsi-v2-key-values-example">WasteWaterPlant NGSI-v2 key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wastewaterplant-ngsi-v2-normalized-example">WasteWaterPlant NGSI-v2 normalized Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wastewaterplant-ngsi-ld-key-values-example">WasteWaterPlant NGSI-LD key-values Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wastewaterplant-ngsi-ld-normalized-example">WasteWaterPlant NGSI-LD normalized Example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterSimulationResult.html">WasteWaterSimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WasteWaterTank.html">WasteWaterTank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="WaterProcess.html">WaterProcess</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterConsumption</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterConsumption/WaterConsumptionObserved.html">WaterConsumptionObserved</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistribution</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistribution/WaterDistributionNetwork.html">WaterDistributionNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterDistributionManagementEPANET</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Curve.html">Curve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Junction.html">Junction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pattern.html">Pattern</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pipe.html">Pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Pump.html">Pump</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Reservoir.html">Reservoir</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/SimulationResult.html">SimulationResult</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/SimulationScenario.html">SimulationScenario</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Tank.html">Tank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/Valve.html">Valve</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterDistributionManagementEPANET/WaterNetwork.html">WaterNetwork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">WaterQuality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityObserved.html">WaterQualityObserved</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WaterQuality/WaterQualityPredicted.html">WaterQualityPredicted</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Smart Water</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>WasteWater &raquo;</li>
+      <li>WasteWaterPlant</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FIWARE-Ops/brand-guide/edit/master/docs/WasteWater/WasteWaterPlant.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- 10-Header -->
+
+<p><a href="https://smartdatamodels.org"><img alt="Smart Data Models" src="https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png" title="Logo" /></a>  </p>
+<h1 id="entity-wastewaterplant">Entity: WasteWaterPlant</h1>
+<!-- /10-Header -->
+
+<!-- 15-License -->
+
+<p><a href="https://github.com/smart-data-models//dataModel.WasteWater/blob/master/WasteWaterPlant/LICENSE.md">Open License</a>  </p>
+<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.gb715ace035_0_60">document generated automatically</a>  </p>
+<!-- /15-License -->
+
+<!-- 20-Description -->
+
+<p>Global description: <strong>Data model for waste water treatment plant.</strong>  </p>
+<p>version: 0.0.2  </p>
+<!-- /20-Description -->
+
+<!-- 30-PropertiesList -->
+
+<h2 id="list-of-properties">List of properties</h2>
+<p><sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup><br />
+- <code>address[object]</code>: The mailing address  . Model: <a href="https://schema.org/address">https://schema.org/address</a>
+- <code>alternateName[string]</code>: An alternative name for this item<br />
+- <code>areaServed[string]</code>: The geographic area where a service or offered item is provided  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>bod[number]</code>: Biological Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>cod[number]</code>: Chemical Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>dataProvider[string]</code>: A sequence of characters identifying the provider of the harmonised data entity.<br />
+- <code>dateCreated[string]</code>: Entity creation timestamp. This will usually be allocated by the storage platform.<br />
+- <code>dateModified[string]</code>: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.<br />
+- <code>description[string]</code>: A description of this item<br />
+- <code>do[number]</code>: Dissolved oxygen measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>id[*]</code>: Unique identifier of the entity<br />
+- <code>inFlow[number]</code>: In-flow amount into the treatment plant/reservoir corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>location[*]</code>: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon<br />
+- <code>municipalityInfo[object]</code>: Municipality information corresponding to this observation.  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>name[string]</code>: The name of this item.<br />
+- <code>nh4[number]</code>: Ammonium concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>no3[number]</code>: Nitrate concentration measured in waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>observationDateTime[string]</code>: Last reported time of observation.  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>outFlow[number]</code>: Out-flow amount into the treatment plant/reservoir corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>owner[array]</code>: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)<br />
+- <code>pHTSA[object]</code>: Acidity level or basicity level observed in the water. Object defining the temporal processing of the magnitude property during a period. It provides maximum, minimum, instant value and average  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>po4[number]</code>: Ortho-phosphate concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>redox[number]</code>: Reduction potential or oxidation measured in waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>seeAlso[*]</code>: list of uri pointing to additional resources about the item<br />
+- <code>source[string]</code>: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.<br />
+- <code>tic[number]</code>: Total Inorganic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>tn[number]</code>: Total Nitrogen concentration measured in waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>toc[number]</code>: Total Organic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>treatmentPlantCapacity[number]</code>: Handling capacity of the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>treatmentPlantCode[string]</code>: Unique code for the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>treatmentPlantId[number]</code>: Unique identification number for the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>treatmentPlantName[string]</code>: Name of the waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Text">https://schema.org/Text</a>
+- <code>tss[number]</code>: Total suspended solids concentration measured in a waste-water treatment plant corresponding to this observation.  . Model: <a href="https://schema.org/Number">https://schema.org/Number</a>
+- <code>type[string]</code>: NGSI entity type. It has to be WasteWaterPlant  </p>
+<!-- /30-PropertiesList -->
+
+<!-- 35-RequiredProperties -->
+
+<p>Required properties<br />
+- <code>id</code><br />
+- <code>type</code>  </p>
+<!-- /35-RequiredProperties -->
+
+<!-- 40-RequiredProperties -->
+
+<!-- /40-RequiredProperties -->
+
+<!-- 50-DataModelHeader -->
+
+<h2 id="data-model-description-of-properties">Data Model description of properties</h2>
+<p>Sorted alphabetically (click for details)  </p>
+<!-- /50-DataModelHeader -->
+
+<!-- 60-ModelYaml -->
+
+<details><summary><strong>full yaml details</strong></summary>    
+
+
+<pre><code class="language-yaml">WasteWaterPlant:    
+  description: 'Data model for waste water treatment plant.'    
+  properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    bod:    
+      description: 'Biological Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    cod:    
+      description: 'Chemical Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    do:    
+      description: 'Dissolved oxygen measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    id:    
+      anyOf: &amp;wastewaterplant_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
+    inFlow:    
+      description: 'In-flow amount into the treatment plant/reservoir corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'GeoProperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      x-ngsi:    
+        type: GeoProperty    
+    municipalityInfo:    
+      description: 'Municipality information corresponding to this observation.'    
+      properties:    
+        cityId:    
+          description: 'Property. Model:''https://schema.org/Text''. City Id corresponding to this observation.'    
+          type: string    
+        cityName:    
+          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'    
+          type: string    
+        district:    
+          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'    
+          type: string    
+        stateName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'    
+          type: string    
+        ulbName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'    
+          type: string    
+        wardId:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward Id corresponding to this observation.'    
+          type: string    
+        wardName:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'    
+          type: string    
+        wardNum:    
+          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'    
+          type: number    
+        zoneId:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone Id corresponding to this observation.'    
+          type: string    
+        zoneName:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    name:    
+      description: 'The name of this item.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    nh4:    
+      description: 'Ammonium concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    no3:    
+      description: 'Nitrate concentration measured in waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    observationDateTime:    
+      description: 'Last reported time of observation.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    outFlow:    
+      description: 'Out-flow amount into the treatment plant/reservoir corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *wastewaterplant_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    pHTSA:    
+      description: 'Acidity level or basicity level observed in the water. Object defining the temporal processing of the magnitude property during a period. It provides maximum, minimum, instant value and average'    
+      properties:    
+        avgOverTime:    
+          description: 'Property. Model:''https://schema.org/Number''. Describes the average value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value'    
+          type: number    
+        instValue:    
+          description: 'Property. Model:''https://schema.org/Number''. Describes the instantaneous value (associated with the current timestamp) of a time varying quantity.'    
+          type: number    
+        maxOverTime:    
+          description: 'Property. Model:''https://schema.org/Number''. Describes the maximum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value'    
+          type: number    
+        minOverTime:    
+          description: 'Property. Model:''https://schema.org/Number''. Describes the minimum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value.'    
+          type: number    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    po4:    
+      description: 'Ortho-phosphate concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    redox:    
+      description: 'Reduction potential or oxidation measured in waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      x-ngsi:    
+        type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    tic:    
+      description: 'Total Inorganic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    tn:    
+      description: 'Total Nitrogen concentration measured in waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    toc:    
+      description: 'Total Organic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    treatmentPlantCapacity:    
+      description: 'Handling capacity of the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    treatmentPlantCode:    
+      description: 'Unique code for the waste-water treatment plant corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    treatmentPlantId:    
+      description: 'Unique identification number for the waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    treatmentPlantName:    
+      description: 'Name of the waste-water treatment plant corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    tss:    
+      description: 'Total suspended solids concentration measured in a waste-water treatment plant corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    type:    
+      description: 'NGSI entity type. It has to be WasteWaterPlant'    
+      enum:    
+        - WasteWaterPlant    
+      type: string    
+      x-ngsi:    
+        type: Property    
+  required:    
+    - id    
+    - type    
+  type: object    
+  x-derived-from: &quot;&quot;    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WasteWater/blob/master/WasteWaterPlant/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WasteWater/WasteWaterPlant/schema.json    
+  x-model-tags: IUDX    
+  x-version: 0.0.2    
+</code></pre>
+
+</details>
+<pre><code>
+</code></pre>
+<!-- /60-ModelYaml -->
+
+<!-- 70-MiddleNotes -->
+
+<!-- /70-MiddleNotes -->
+
+<!-- 80-Examples -->
+
+<h2 id="example-payloads">Example payloads</h2>
+<h4 id="wastewaterplant-ngsi-v2-key-values-example">WasteWaterPlant NGSI-v2 key-values Example</h4>
+<p>Here is an example of a WasteWaterPlant in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;uri:ngsi-ld:1234:A43R&quot;,  
+  &quot;type&quot;: &quot;WasteWaterPlant&quot;,  
+  &quot;no3&quot;: 10,  
+  &quot;bod&quot;: 250,  
+  &quot;inFlow&quot;: 5,  
+  &quot;toc&quot;: 0.7,  
+  &quot;nh4&quot;: 50,  
+  &quot;redox&quot;: 25,  
+  &quot;do&quot;: 4,  
+  &quot;treatmentPlantId&quot;: 7,  
+  &quot;outFlow&quot;: 6.7,  
+  &quot;tss&quot;: 2,  
+  &quot;treatmentPlantCapacity&quot;: 10,  
+  &quot;tic&quot;: 2,  
+  &quot;tn&quot;: 9,  
+  &quot;po4&quot;: 6,  
+  &quot;cod&quot;: 25,  
+  &quot;treatmentPlantName&quot;: &quot;A&quot;,  
+  &quot;treatmentPlantCode&quot;: &quot;2&quot;,  
+  &quot;observationDateTime&quot;: &quot;2021-03-11T15:51:02+05:30&quot;,  
+  &quot;pHTSA&quot;: {  
+    &quot;avgOverTime&quot;: 8,  
+    &quot;maxOverTime&quot;: 10,  
+    &quot;instValue&quot;: 6,  
+    &quot;minOverTime&quot;: 6  
+  },  
+  &quot;municipalityInfo&quot;: {  
+    &quot;district&quot;: &quot;Bangalore Urban&quot;,  
+    &quot;ulbName&quot;: &quot;BMC&quot;,  
+    &quot;cityId&quot;: &quot;23&quot;,  
+    &quot;wardId&quot;: &quot;23&quot;,  
+    &quot;stateName&quot;: &quot;Karnataka&quot;,  
+    &quot;cityName&quot;: &quot;Bangalore&quot;,  
+    &quot;zoneName&quot;: &quot;South&quot;,  
+    &quot;wardName&quot;: &quot;Bangalore Urban&quot;,  
+    &quot;zoneId&quot;: &quot;2&quot;,  
+    &quot;wardNum&quot;: 4  
+  }  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="wastewaterplant-ngsi-v2-normalized-example">WasteWaterPlant NGSI-v2 normalized Example</h4>
+<p>Here is an example of a WasteWaterPlant in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+  &quot;id&quot;: &quot;uri:ngsi-ld:1234:A43R&quot;,  
+  &quot;type&quot;: &quot;WasteWaterPlant&quot;,  
+  &quot;no3&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 10  
+  },  
+  &quot;bod&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 250  
+  },  
+  &quot;inFlow&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 5  
+  },  
+  &quot;toc&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 0.7  
+  },  
+  &quot;nh4&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 50  
+  },  
+  &quot;redox&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 25  
+  },  
+  &quot;do&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 4  
+  },  
+  &quot;treatmentPlantId&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 7  
+  },  
+  &quot;outFlow&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 6.7  
+  },  
+  &quot;tss&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 2  
+  },  
+  &quot;treatmentPlantCapacity&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 10  
+  },  
+  &quot;tic&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 2  
+  },  
+  &quot;tn&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 9  
+  },  
+  &quot;po4&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 6  
+  },  
+  &quot;cod&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: 25  
+  },  
+  &quot;treatmentPlantName&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: &quot;A&quot;  
+  },  
+  &quot;treatmentPlantCode&quot;: {  
+    &quot;type&quot;: &quot;Number&quot;,  
+    &quot;value&quot;: &quot;2&quot;  
+  },  
+  &quot;observationDateTime&quot;: {  
+    &quot;type&quot;: &quot;DateTime&quot;,  
+    &quot;value&quot;: &quot;2021-03-11T15:51:02+05:30&quot;  
+  },  
+  &quot;pHTSA&quot;: {  
+    &quot;type&quot;: &quot;StructuredValue&quot;,  
+    &quot;value&quot;: {  
+      &quot;avgOverTime&quot;: 8,  
+      &quot;maxOverTime&quot;: 10,  
+      &quot;instValue&quot;: 6,  
+      &quot;minOverTime&quot;: 6  
+    }  
+  },  
+  &quot;municipalityInfo&quot;: {  
+    &quot;type&quot;: &quot;StructuredValue&quot;,  
+    &quot;value&quot;: {  
+      &quot;district&quot;: &quot;Bangalore Urban&quot;,  
+      &quot;ulbName&quot;: &quot;BMC&quot;,  
+      &quot;cityId&quot;: &quot;23&quot;,  
+      &quot;wardId&quot;: &quot;23&quot;,  
+      &quot;stateName&quot;: &quot;Karnataka&quot;,  
+      &quot;cityName&quot;: &quot;Bangalore&quot;,  
+      &quot;zoneName&quot;: &quot;South&quot;,  
+      &quot;wardName&quot;: &quot;Bangalore Urban&quot;,  
+      &quot;zoneId&quot;: &quot;2&quot;,  
+      &quot;wardNum&quot;: 4  
+    }  
+  }  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="wastewaterplant-ngsi-ld-key-values-example">WasteWaterPlant NGSI-LD key-values Example</h4>
+<p>Here is an example of a WasteWaterPlant in JSON-LD format as key-values. This is compatible with NGSI-LD when  using <code>options=keyValues</code> and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+    &quot;id&quot;: &quot;uri:ngsi-ld:1234:A43R&quot;,  
+    &quot;type&quot;: &quot;WasteWaterPlant&quot;,  
+    &quot;bod&quot;: 250,  
+    &quot;cod&quot;: 25,  
+    &quot;do&quot;: 4,  
+    &quot;inFlow&quot;: 5,  
+    &quot;municipalityInfo&quot;: {  
+        &quot;district&quot;: &quot;Bangalore Urban&quot;,  
+        &quot;ulbName&quot;: &quot;BMC&quot;,  
+        &quot;cityId&quot;: &quot;23&quot;,  
+        &quot;wardId&quot;: &quot;23&quot;,  
+        &quot;stateName&quot;: &quot;Karnataka&quot;,  
+        &quot;cityName&quot;: &quot;Bangalore&quot;,  
+        &quot;zoneName&quot;: &quot;South&quot;,  
+        &quot;wardName&quot;: &quot;Bangalore Urban&quot;,  
+        &quot;zoneId&quot;: &quot;2&quot;,  
+        &quot;wardNum&quot;: 4  
+    },  
+    &quot;nh4&quot;: 50,  
+    &quot;no3&quot;: 10,  
+    &quot;observationDateTime&quot;: &quot;2021-03-11T15:51:02+05:30&quot;,  
+    &quot;outFlow&quot;: 6.7,  
+    &quot;pHTSA&quot;: {  
+        &quot;avgOverTime&quot;: 8,  
+        &quot;maxOverTime&quot;: 10,  
+        &quot;instValue&quot;: 6,  
+        &quot;minOverTime&quot;: 6  
+    },  
+    &quot;po4&quot;: 6,  
+    &quot;redox&quot;: 25,  
+    &quot;tic&quot;: 2,  
+    &quot;tn&quot;: 9,  
+    &quot;toc&quot;: 0.7,  
+    &quot;treatmentPlantCapacity&quot;: 10,  
+    &quot;treatmentPlantCode&quot;: &quot;2&quot;,  
+    &quot;treatmentPlantId&quot;: 7,  
+    &quot;treatmentPlantName&quot;: &quot;A&quot;,  
+    &quot;tss&quot;: 2,  
+    &quot;@context&quot;: [  
+        &quot;iudx:WasteWaterMgmt&quot;,  
+        &quot;https://raw.githubusercontent.com/smart-data-models/dataModel.WasteWater/master/context.jsonld&quot;  
+    ]  
+}  
+</code></pre>
+
+</details>
+
+<h4 id="wastewaterplant-ngsi-ld-normalized-example">WasteWaterPlant NGSI-LD normalized Example</h4>
+<p>Here is an example of a WasteWaterPlant in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  </p>
+<details><summary><strong>show/hide example</strong></summary>    
+
+
+<pre><code class="language-json">
+{  
+    &quot;id&quot;: &quot;uri:ngsi-ld:1234:A43R&quot;,  
+    &quot;type&quot;: &quot;WasteWaterPlant&quot;,  
+    &quot;bod&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 250  
+    },  
+    &quot;cod&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 25  
+    },  
+    &quot;do&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 4  
+    },  
+    &quot;inFlow&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 5  
+    },  
+    &quot;municipalityInfo&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: {  
+            &quot;district&quot;: &quot;Bangalore Urban&quot;,  
+            &quot;ulbName&quot;: &quot;BMC&quot;,  
+            &quot;cityId&quot;: &quot;23&quot;,  
+            &quot;wardId&quot;: &quot;23&quot;,  
+            &quot;stateName&quot;: &quot;Karnataka&quot;,  
+            &quot;cityName&quot;: &quot;Bangalore&quot;,  
+            &quot;zoneName&quot;: &quot;South&quot;,  
+            &quot;wardName&quot;: &quot;Bangalore Urban&quot;,  
+            &quot;zoneId&quot;: &quot;2&quot;,  
+            &quot;wardNum&quot;: 4  
+        }  
+    },  
+    &quot;nh4&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 50  
+    },  
+    &quot;no3&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 10  
+    },  
+    &quot;observationDateTime&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: {  
+            &quot;@type&quot;: &quot;DateTime&quot;,  
+            &quot;@value&quot;: &quot;2021-03-11T15:51:02+05:30&quot;  
+        }  
+    },  
+    &quot;outFlow&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 6.7  
+    },  
+    &quot;pHTSA&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: {  
+            &quot;avgOverTime&quot;: 8,  
+            &quot;maxOverTime&quot;: 10,  
+            &quot;instValue&quot;: 6,  
+            &quot;minOverTime&quot;: 6  
+        }  
+    },  
+    &quot;po4&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 6  
+    },  
+    &quot;redox&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 25  
+    },  
+    &quot;tic&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 2  
+    },  
+    &quot;tn&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 9  
+    },  
+    &quot;toc&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 0.7  
+    },  
+    &quot;treatmentPlantCapacity&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 10  
+    },  
+    &quot;treatmentPlantCode&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: &quot;2&quot;  
+    },  
+    &quot;treatmentPlantId&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 7  
+    },  
+    &quot;treatmentPlantName&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: &quot;A&quot;  
+    },  
+    &quot;tss&quot;: {  
+        &quot;type&quot;: &quot;Property&quot;,  
+        &quot;value&quot;: 2  
+    },  
+    &quot;@context&quot;: [  
+        &quot;iudx:WasteWaterMgmt&quot;,  
+        &quot;https://raw.githubusercontent.com/smart-data-models/dataModel.WasteWater/master/context.jsonld&quot;  
+    ]  
+}  
+</code></pre>
+
+</details>
+<!-- 90-FooterNotes -->
+
+<!-- /90-FooterNotes -->
+
+<!-- 95-Units -->
+
+<p>See <a href="https://smartdatamodels.org/index.php/faqs/">FAQ 10</a> to get an answer on how to deal with magnitude units  </p>
+<!-- /95-Units -->
+
+<!-- 97-LastFooter -->
+
+<hr />
+<p><a href="https://smartdatamodels.org">Smart Data Models</a> +++ <a href="https://bit.ly/contribution_manual">Contribution Manual</a> +++ <a href="https://bit.ly/Introduction_SDM">About</a><!-- /97-LastFooter --></p>
+<!-- /80-Examples -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="WasteWaterJunction.html" class="btn btn-neutral float-left" title="WasteWaterJunction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="WasteWaterSimulationResult.html" class="btn btn-neutral float-right" title="WasteWaterSimulationResult">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FIWARE-Ops/brand-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="WasteWaterJunction.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="WasteWaterSimulationResult.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
