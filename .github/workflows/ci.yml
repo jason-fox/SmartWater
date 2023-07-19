@@ -23,7 +23,6 @@ jobs:
           python3 -m pip install mkdocs            # install mkdocs
       - name: Build html
         run: |
-          echo "  - Intro: 'index.md'" >> mkdocs.yml
           previous=''
           listing=`find . -type f -name spec.md  -print0 | sort -z | xargs -r0`
 
