@@ -1,6 +1,24 @@
 Smart Water
 ==========
 
+
+<div id="social-meta">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://smartdatamodels.org">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Smart Data Models : Water">
+  <meta property="og:description" content="Data models related to the Water Management Domain.">
+  <meta property="og:image" content="https://i0.wp.com/smartdatamodels.org/wp-content/uploads/2022/01/favicon.png?fit=400%2C400&ssl=1">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="smartdatamodels.org">
+  <meta property="twitter:url" content="https://smartdatamodels.org">
+  <meta name="twitter:title" content="Smart Data Models">
+  <meta name="twitter:description" content="Data models related to the Water Management Domain. Includes data models for Waste Water, Water Quality, Water Distribution & etc.">
+  <meta name="twitter:image" content="https://i0.wp.com/smartdatamodels.org/wp-content/uploads/2022/01/favicon.png?fit=400%2C400&ssl=1">
+</div>
+        
+
 Data models related to the Water Management Domain. Includes data models for
 Waste Water, Water Quality, Water Distribution & etc.
 
